@@ -23,126 +23,334 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="theme-toggle">🌙</button>
+      <button class="mobile-toggle">☰</button>
     </nav>
   </header>
 
   <!-- Hero -->
-<section id="hero">
-  <div class="hero-content">
-    <h1>Hi, I'm <span class="shine">Arun Kumar</span> 👋</h1>
-    <br>
-    <p>Software Developer @ People Interactive (I) Pvt Ltd</p>
-  </div>
-</section>
-
-
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="shine">Arun Kumar</span> 👋</h1>
+      <br>
+      <p class="typing-text"></p>
+    </div>
+  </section>
 
   <!-- About -->
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>I am a Computer Science & Engineering student at IIT Madras with a passion for problem-solving, software development, and building impactful applications. Enthusiastic about algorithms, system design, and full-stack development.</p>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div class="project">
-        <h3>RailRoute</h3>
-        <p>Full-stack app to find optimal train routes using graph algorithms.</p>
-        <a href="https://github.com/12arun34/RailRoute" target="_blank">View Code</a>
+      
+      <div class="project" data-project="1">
+        <h3>🚂 RailRoute</h3>
+        <p class="project-short">Full-stack app to find optimal train routes using graph algorithms.</p>
+        <div class="project-details">
+          <p><strong>Technologies:</strong> Node.js, Express, React, MongoDB, Graph Algorithms</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Implements Dijkstra's algorithm for finding shortest paths between stations</li>
+            <li>Real-time route optimization with multiple criteria (time, cost, transfers)</li>
+            <li>Interactive map visualization of railway networks</li>
+            <li>RESTful API backend with MongoDB for station and route data</li>
+            <li>Responsive frontend built with React and Material-UI</li>
+          </ul>
+          <p><strong>Impact:</strong> Helps users make informed travel decisions by comparing different route options efficiently.</p>
+        </div>
+        <div class="project-actions">
+          <button class="view-more-btn">View More</button>
+          <a href="https://github.com/12arun34/RailRoute" target="_blank" class="btn-small">View Code</a>
+        </div>
       </div>
-      <div class="project">
-        <h3>Chatroom</h3>
-        <p>Multi-threaded client-server chatroom using C and sockets.</p>
-        <a href="https://github.com/12arun34/Network-Application-using-Socket-Programming" target="_blank">View Code</a>
+
+      <div class="project" data-project="2">
+        <h3>💬 Chatroom</h3>
+        <p class="project-short">Multi-threaded client-server chatroom using C and sockets.</p>
+        <div class="project-details">
+          <p><strong>Technologies:</strong> C, Socket Programming, POSIX Threads, Linux</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Multi-threaded server supporting concurrent client connections</li>
+            <li>Real-time message broadcasting to all connected clients</li>
+            <li>TCP/IP socket communication for reliable data transfer</li>
+            <li>Thread synchronization using mutexes and condition variables</li>
+            <li>Custom protocol implementation for message formatting</li>
+            <li>Graceful connection handling and error recovery</li>
+          </ul>
+          <p><strong>Impact:</strong> Demonstrates low-level network programming and concurrent system design principles.</p>
+        </div>
+        <div class="project-actions">
+          <button class="view-more-btn">View More</button>
+          <a href="https://github.com/12arun34/Network-Application-using-Socket-Programming" target="_blank" class="btn-small">View Code</a>
+        </div>
       </div>
-      <div class="project">
-        <h3>CPU Scheduler</h3>
-        <p>Dynamic CPU scheduling with MLFQ algorithm.</p>
-        <a href="https://github.com/12arun34/Operating-System" target="_blank">View Code</a>
+
+      <div class="project" data-project="3">
+        <h3>⚙️ CPU Scheduler</h3>
+        <p class="project-short">Dynamic CPU scheduling with MLFQ algorithm.</p>
+        <div class="project-details">
+          <p><strong>Technologies:</strong> C, Operating Systems, MLFQ Algorithm</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Implementation of Multi-Level Feedback Queue (MLFQ) scheduling algorithm</li>
+            <li>Dynamic priority adjustment based on process behavior</li>
+            <li>Support for multiple ready queues with different time quantums</li>
+            <li>Preemption and context switching simulation</li>
+            <li>Performance metrics tracking (turnaround time, waiting time, CPU utilization)</li>
+            <li>Comparison with other scheduling algorithms (FCFS, SJF, Round Robin)</li>
+          </ul>
+          <p><strong>Impact:</strong> Provides insights into OS scheduling mechanisms and their trade-offs.</p>
+        </div>
+        <div class="project-actions">
+          <button class="view-more-btn">View More</button>
+          <a href="https://github.com/12arun34/Operating-System" target="_blank" class="btn-small">View Code</a>
+        </div>
       </div>
-      <div class="project">
-        <h3>Decision Matrix</h3>
-        <p>Android app to aid decision-making with matrix-based algorithm.</p>
-        <a href="https://github.com/12arun34/Decision-Matrix" target="_blank">View Code</a>
+
+      <div class="project" data-project="4">
+        <h3>📊 Decision Matrix</h3>
+        <p class="project-short">Android app to aid decision-making with matrix-based algorithm.</p>
+        <div class="project-details">
+          <p><strong>Technologies:</strong> Android Studio, Java, SQLite, Material Design</p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Weighted decision matrix for comparing multiple options</li>
+            <li>Customizable criteria with user-defined importance weights</li>
+            <li>Visual scoring system with color-coded results</li>
+            <li>Local data persistence using SQLite database</li>
+            <li>Material Design UI with smooth animations</li>
+            <li>Export decisions as PDF or share via other apps</li>
+          </ul>
+          <p><strong>Impact:</strong> Helps users make rational, data-driven decisions by systematically evaluating alternatives.</p>
+        </div>
+        <div class="project-actions">
+          <button class="view-more-btn">View More</button>
+          <a href="https://github.com/12arun34/Decision-Matrix" target="_blank" class="btn-small">View Code</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+
+    <div class="skills-category">
+      <h3>Programming Languages</h3>
+      <div class="skills-list">
+        <div class="skill-item" data-skill="cpp">
+          <span>💻 C++</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="c">
+          <span>💻 C</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="java">
+          <span>☕ Java</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="80"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="python">
+          <span>🐍 Python</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="html">
+          <span>🌐 HTML</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="95"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="css">
+          <span>🎨 CSS</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="js">
+          <span>⚡ JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="88"></div>
+          </div>
+        </div>
+        <div class="skill-item" data-skill="sql">
+          <span>🗄️ SQL</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="82"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Frameworks</h3>
+      <div class="skills-list">
+        <div class="skill-item">
+          <span>🌐 Node.js</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>🛠️ Django</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="75"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>📱 Android Studio</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="80"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Tools</h3>
+      <div class="skills-list">
+        <div class="skill-item">
+          <span>🐳 Docker</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="78"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>⚡ Kafka</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="70"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>🐧 Linux</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="88"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>📂 Git</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span>🗄️ MySQL</span>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="82"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2>Skills</h2>
-
-  <div class="skills-category">
-    <h3>Programming Languages</h3>
-    <div class="skills-list">
-      <span>💻 C++</span>
-      <span>💻 C</span>
-      <span>☕ Java</span>
-      <span>🐍 Python</span>
-      <span>🌐 HTML</span>
-      <span>🎨 CSS</span>
-      <span>⚡ JavaScript</span>
-      <span>🗄️ SQL</span>
-    </div>
-  </div>
-
-  <div class="skills-category">
-    <h3>Frameworks</h3>
-    <div class="skills-list">
-      <span>🌐 Node.js</span>
-      <span>🛠️ Django</span>
-      <span>📱 Android Studio</span>
-    </div>
-  </div>
-
-  <div class="skills-category">
-    <h3>Tools</h3>
-    <div class="skills-list">
-      <span>🐳 Docker</span>
-      <span>⚡ Kafka</span>
-      <span>🐧 Linux</span>
-      <span>📂 Git</span>
-      <span>🗄️ MySQL</span>
-    </div>
-  </div>
-</section>
-
-
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" class="fade-in">
     <h2>Experience & Responsibilities</h2>
-    <p><b>Software Developer- (<i>Currently</i> | People Interactive(I) Pvt. Ltd.):</b> As a Backend Developer at <a href="https://www.shaadi.com/matrimony/mumbai-matrimony?ptnr=G_IN_GP_MAHA_12" target="_blank">People Interactive(I) Pvt. Ltd.</a> I develop scalable solutions and collaborate with cross-functional teams. My key responsibilities include coding, optimization, and problem-solving. I'm passionate about building efficient systems and contributing to <a href="https://www.shaadi.com/matrimony/mumbai-matrimony?ptnr=G_IN_GP_MAHA_12" target="_blank">People group's</a> mission. I'm excited to make a meaningful impact and grow with the company.</p>
-    <p><b>Coordinator -  (Institute WebOps Club | IIT Madras):</b> • Contributed to the development of 'InstiQuora', an internal platform for student interaction and Q&A, by
-designing the post section in a rectangular format.
-• Utilized HTML, CSS, and JavaScript to implement features including support for images and descriptions.</p>
-    <p><b>Coordinator - (Computer Science Asociation | IIT Madras) :</b> • Event Management Team: Contributed to the successful execution of the CS Trophy Tournament,
-coordinating and overseeing multiple sports and games to ensure smooth operation and engagement.
-• Design Team: Collaborated in a team to design the CSA logo using Adobe Photoshop and Canva.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Software Developer</h3>
+          <p class="timeline-company">People Interactive (I) Pvt. Ltd. - <em>Currently</em></p>
+          <p>As a Backend Developer at <a href="https://www.shaadi.com/matrimony/mumbai-matrimony?ptnr=G_IN_GP_MAHA_12" target="_blank">People Interactive(I) Pvt. Ltd.</a>, I develop scalable solutions and collaborate with cross-functional teams. My key responsibilities include coding, optimization, and problem-solving. I'm passionate about building efficient systems and contributing to <a href="https://www.shaadi.com/matrimony/mumbai-matrimony?ptnr=G_IN_GP_MAHA_12" target="_blank">People group's</a> mission. I'm excited to make a meaningful impact and grow with the company.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Coordinator</h3>
+          <p class="timeline-company">Institute WebOps Club - IIT Madras</p>
+          <p>• Contributed to the development of 'InstiQuora', an internal platform for student interaction and Q&A, by designing the post section in a rectangular format.<br>
+          • Utilized HTML, CSS, and JavaScript to implement features including support for images and descriptions.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Coordinator</h3>
+          <p class="timeline-company">Computer Science Association - IIT Madras</p>
+          <p>• Event Management Team: Contributed to the successful execution of the CS Trophy Tournament, coordinating and overseeing multiple sports and games to ensure smooth operation and engagement.<br>
+          • Design Team: Collaborated in a team to design the CSA logo using Adobe Photoshop and Canva.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Education -->
-  <section id="education">
+  <section id="education" class="fade-in">
     <h2>Education</h2>
-    <p><b>IIT Madras</b> — B.Tech in CSE — CGPA: 7.19 (2021-2025)</p>
-    <p><b>Class XII</b> — Deep Chand Public School, Haryana — 86.2% (2020-2021)</p>
-    <p><b>Class X</b> — D.C Convent School, Delhi — 91% (2018-2019)</p>
+    <div class="education-grid">
+      <div class="education-item">
+        <h3>🎓 IIT Madras</h3>
+        <p><strong>B.Tech in Computer Science & Engineering</strong></p>
+        <p>CGPA: 7.19</p>
+        <p class="year">2021 - 2025</p>
+      </div>
+      <div class="education-item">
+        <h3>📚 Class XII</h3>
+        <p><strong>Deep Chand Public School, Haryana</strong></p>
+        <p>Percentage: 86.2%</p>
+        <p class="year">2020 - 2021</p>
+      </div>
+      <div class="education-item">
+        <h3>📚 Class X</h3>
+        <p><strong>D.C Convent School, Delhi</strong></p>
+        <p>Percentage: 91%</p>
+        <p class="year">2018 - 2019</p>
+      </div>
+    </div>
   </section>
 
   <!-- Resume -->
-  <section id="resume">
+  <section id="resume" class="fade-in">
     <h2>Resume</h2>
     <a href="Resume.pdf" download class="btn">⬇ Download Resume</a>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:arunkumar.aesl@gmail.com">arunkumar.aesl@gmail.com</a></p>
-    <p>📞 +91 99357 63189 (whatsapp only)</p>
-    <p>💼 <a href="https://www.linkedin.com/in/arun-kumar-38a91a230" target="_blank">LinkedIn</a></p>
-    <p>🐙 <a href="https://github.com/12arun34" target="_blank">GitHub</a></p>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:arunkumar.aesl@gmail.com">arunkumar.aesl@gmail.com</a></p>
+      <p>📞 +91 99357 63189 (whatsapp only)</p>
+      <p>💼 <a href="https://www.linkedin.com/in/arun-kumar-38a91a230" target="_blank">LinkedIn</a></p>
+      <p>🐙 <a href="https://github.com/12arun34" target="_blank">GitHub</a></p>
+    </div>
+    
+    <div class="contact-form-container">
+      <h3>Send me a message</h3>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          <span class="error-message"></span>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div id="form-status"></div>
+    </div>
   </section>
 
   <footer>

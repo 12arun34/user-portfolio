@@ -346,15 +346,6 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
-// ========== PARALLAX EFFECT FOR HERO ==========
-const hero = document.getElementById("hero");
-if (hero) {
-  window.addEventListener("scroll", () => {
-    const scrolled = window.scrollY;
-    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-  });
-}
-
 // ========== CURSOR ANIMATION (Optional) ==========
 const cursor = document.createElement("div");
 cursor.className = "custom-cursor";

@@ -6,6 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
+console.log(`Starting server with the following configuration:`);
+
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());

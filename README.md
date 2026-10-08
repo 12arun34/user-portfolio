@@ -1,6 +1,6 @@
 # Arun Kumar - Portfolio Website
 
-A dynamic and interactive portfolio website showcasing my skills, projects, and experience.this is arun-dev changes
+A dynamic and interactive portfolio website showcasing my skills, projects, and experience.this is arun-dev changes . THis is second changes.
 
 ## Features
 
